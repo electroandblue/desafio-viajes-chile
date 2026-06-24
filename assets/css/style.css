@@ -1,0 +1,136 @@
+/* ==============================================================
+   1. ESTILOS GENERALES Y CONFIGURACIÓN
+   ============================================================== */
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave nativo */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000000; /* Forzar fondo negro puro */
+}
+
+/* Compensación para que el Navbar fijo no tape los títulos al hacer scroll */
+section {
+    scroll-margin-top: 72px;
+}
+
+/* ==============================================================
+   2. BARRA DE NAVEGACIÓN (Navbar)
+   ============================================================== */
+#navbar {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+/* Clase dinámica activada por JS al bajar 50px */
+#navbar.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    border-bottom: 1px solid #0dcaf0; /* Color info de Bootstrap */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Transición suave para evitar cambios bruscos de transparencia */
+.transition-navbar {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Ajuste de los enlaces del menú */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #0dcaf0;
+}
+
+/* ==============================================================
+   3. COMPONENTE: CAROUSEL (Hero)
+   ============================================================== */
+.hero-img {
+    height: 650px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Ajuste responsivo para pantallas medianas y pequeñas */
+@media (max-width: 992px) {
+    .hero-img {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-img {
+        height: 300px;
+    }
+}
+
+/* ==============================================================
+   4. COMPONENTE: TARJETAS (Cards Destacados)
+   ============================================================== */
+.card {
+    overflow: hidden; /* Mantiene el efecto zoom dentro de los límites de la tarjeta */
+    background-color: transparent !important; /* Elimina el fondo blanco oculto de Bootstrap */
+    border: none !important;
+}
+
+.card-custom-img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 !important; /* SOLUCIÓN: Elimina el redondeado de Bootstrap que causaba el borde feo */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de movimiento controlado al pasar el cursor */
+.card:hover .card-custom-img {
+    transform: scale(1.04);
+}
+
+/* Asegura que los textos mantengan consistencia */
+.card-body {
+    padding: 1.25rem;
+}
+
+/* ==============================================================
+   5. SECCIÓN CONTACTO (Formulario)
+   ============================================================== */
+#contacto .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#contacto .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #0dcaf0;
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(13, 202, 240, 0.5);
+}
+
+/* Configuración de la alerta flotante o controlada por JS */
+#alertaExito {
+    transition: all 0.3s ease;
+}
+
+/* ==============================================================
+   6. FOOTER Y ICONOS SOCIALES
+   ============================================================== */
+footer h3 {
+    letter-spacing: 2px;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto interactivo en los logos de redes sociales */
+.social-icons a:hover {
+    transform: scale(1.2) translateY(-2px);
+    color: #ffffff !important; /* Brillo blanco al posicionarse encima */
+}
