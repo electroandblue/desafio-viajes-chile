@@ -1,6 +1,6 @@
 # Viajes Chile
 
-Landing page desarrollada como parte del curso "Fundamentos de Desarrollo Frontend" de Desafío Latam.
+Landing page desarrollada en el marco del programa de formación "Desarrollo de Aplicaciones Fullstack Python Trainee" de Talento Digital para Chile (SENCE).
 
 ## Descripción del Proyecto
 Este sitio web es una propuesta de landing page para la agencia de viajes "Viajes Chile", diseñada con un enfoque responsivo y una navegación fluida.
